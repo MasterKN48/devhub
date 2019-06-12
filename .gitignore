@@ -25,10 +25,11 @@ coverage
 
 # Bower dependency directory (https://bower.io/)
 bower_components
-
+client/node_modules
+client/package-lock.json
 # node-waf configuration
 .lock-wscript
-
+package-lock.json
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
