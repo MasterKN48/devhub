@@ -11,7 +11,6 @@ const validateLoginInput=require('../../valid/login');
 const User=require('../../models/User');
 const key = require("../../config/keys").secretKey;
 
-
 // @route   POST api/users/register
 // @desc    Register user
 // @access  Public
