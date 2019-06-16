@@ -26,11 +26,9 @@ class Login extends Component {
     }
     componentWillReceiveProps(nextProps){
         if(nextProps.auth.isAuthenticated){
-            console.log('i m in true');
             this.props.history.push('/dashboard');
         }
         if(nextProps.errors){
-            console.log('i m in errors');
             this.setState({
                 errors: nextProps.errors
             })
