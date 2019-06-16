@@ -13,6 +13,7 @@ import Register from './component/auth/Register';
 import Login from './component/auth/Login';
 import { Provider } from "react-redux";
 import store from './store';
+import CreateProfile from './component/create-profile/CreateProfile';
 import Dashboard from './component/dashboard/Dashboard';
 // check for token
 if(localStorage.jwtToken){
@@ -46,7 +47,10 @@ function App() {
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <Switch>
-          <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            <PrivateRoute exact path="/dashboard" component={Dashboard} />
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path="/create-profile" component={CreateProfile} />
           </Switch>
         </div>
         <Footer />
