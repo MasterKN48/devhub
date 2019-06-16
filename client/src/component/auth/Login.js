@@ -1,8 +1,7 @@
 import React, { Component } from "react"; 
 import PropTypes from 'prop-types';
-//import {withRouter} from 'react-router-dom'; // use to pass router history to authAction
-import classnames from 'classnames';
 import {connect} from 'react-redux';
+import TextFieldGroup from '../common/TextFieldGroup.js';
 import {loginUser} from '../../actions/authAction';
 class Login extends Component {
     constructor(){
@@ -56,14 +55,23 @@ class Login extends Component {
             <h1 className="display-4 text-center">Log In</h1>
             <p className="lead text-center">Sign in to your DevHub account</p>
             <form onSubmit={this.onSubmit}>
-                <div className="form-group">
-                <input type="email" value={this.state.email} onChange={this.onChange} className={classnames("form-control form-control-lg",{'is-invalid':errors.email })} placeholder="Email Address" name="email" />
-                {errors.email && (<div className="invalid-feedback">{errors.email}</div>)}
-                </div>
-                <div className="form-group">
-                <input type="password" value={this.state.password} onChange={this.onChange} className={classnames("form-control form-control-lg",{'is-invalid':errors.password })} placeholder="Password" name="password" />
-                {errors.password && (<div className="invalid-feedback">{errors.password}</div>)}
-                </div>
+                <TextFieldGroup
+                 placeholder="Email Address"
+                 name="email"
+                 type="email"
+                 value={this.state.email}
+                 onChange={this.onChange}
+                 errors={errors.email}
+                 />
+                
+                <TextFieldGroup
+                 placeholder="Password"
+                 name="password"
+                 type="password"
+                 value={this.state.password}
+                 onChange={this.onChange}
+                 errors={errors.password}
+                 />
                 <input type="submit" className="btn btn-info btn-block mt-4" />
             </form>
             </div>
