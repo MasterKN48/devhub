@@ -18,7 +18,19 @@ class Dashboard extends Component {
       dashboard=<div><img src={spinner} style={{width:'200px',margin:'auto',display:'block'}}/></div>
     }
     else{
-      dashboard=<h4>Hello..</h4>
+      // if login user have profile data
+      if(Object.keys(profile).length >0){
+          dashboard=<h4>TODO: Display Profile</h4>
+      }else{
+        // USER is Logged in but no profile
+        dashboard=(
+          <div>
+            <p className="lead text-muted">Welcome {user.name}</p>
+            <h4>You have not setup profile, create one</h4>
+            <Link to='/create-profile' className="btn btn-lg btn-info">Create Profile</Link>
+          </div>
+        )
+      }
     }
     return (
      <div className='dashboard'>

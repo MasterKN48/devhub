@@ -1,7 +1,8 @@
 import React from 'react';
-import {BrowserRouter,Route} from 'react-router-dom';
+import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import Navbar from './component/layout/Navbar';
 import './App.css';
+import PrivateRoute from './component/common/PrivateRoute';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './util/setAuthToken';
 import {setCurrentUser, logoutUser} from './actions/authAction';
@@ -44,7 +45,9 @@ function App() {
         <div className="container">
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/dashboard" component={Dashboard} />
+          <Switch>
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
+          </Switch>
         </div>
         <Footer />
       </div>
