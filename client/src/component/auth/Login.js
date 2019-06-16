@@ -20,6 +20,11 @@ class Login extends Component {
             [e.target.name]:e.target.value
         });
     }
+    componentDidMount(){
+        if(this.props.auth.isAuthenticated){
+            this.props.history.push('/dashboard');
+        }
+    }
     componentWillReceiveProps(nextProps){
         if(nextProps.auth.isAuthenticated){
             console.log('i m in true');
