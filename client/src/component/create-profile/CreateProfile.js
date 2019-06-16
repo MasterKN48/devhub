@@ -141,7 +141,7 @@ class CreateProfile extends Component {
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
-                  error={errors.handle}
+                  errors={errors.handle}
                   info="A unique handle for your profile URL. Your full name, company name, nickname"
                 />
                 <SelectListGroup
@@ -158,7 +158,7 @@ class CreateProfile extends Component {
                   name="company"
                   value={this.state.company}
                   onChange={this.onChange}
-                  error={errors.company}
+                  errors={errors.company}
                   info="Could be your own company or one you work for"
                 />
                 <TextFieldGroup
@@ -166,7 +166,7 @@ class CreateProfile extends Component {
                   name="website"
                   value={this.state.website}
                   onChange={this.onChange}
-                  error={errors.website}
+                  errors={errors.website}
                   info="Could be your own website or a company one"
                 />
                 <TextFieldGroup
@@ -174,7 +174,7 @@ class CreateProfile extends Component {
                   name="location"
                   value={this.state.location}
                   onChange={this.onChange}
-                  error={errors.location}
+                  errors={errors.location}
                   info="City or city & state suggested (eg. Boston, MA)"
                 />
                 <TextFieldGroup
@@ -182,7 +182,7 @@ class CreateProfile extends Component {
                   name="skills"
                   value={this.state.skills}
                   onChange={this.onChange}
-                  error={errors.skills}
+                  errors={errors.skills}
                   info="Please use comma separated values (eg.
                     HTML,CSS,JavaScript,PHP"
                 />
@@ -191,7 +191,7 @@ class CreateProfile extends Component {
                   name="githubusername"
                   value={this.state.githubusername}
                   onChange={this.onChange}
-                  error={errors.githubusername}
+                  errors={errors.githubusername}
                   info="If you want your latest repos and a Github link, include your username"
                 />
                 <TextAreaFieldGroup
@@ -199,7 +199,7 @@ class CreateProfile extends Component {
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}
-                  error={errors.bio}
+                  errors={errors.bio}
                   info="Tell us a little about yourself"
                 />
 

@@ -16,7 +16,7 @@ class Navbar extends Component {
       const authLinks=(
           <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                    <a href="" className="nav-link" onClick={this.onLogoutClick.bind(this)}>
+                    <a href="#home" className="nav-link" onClick={this.onLogoutClick.bind(this)}>
                         <img className="rounded-circle" src={user.avatar} alt={user.name} style={{width:'25px',marginRight:'5px'}} title="You must have gavatar to show user image" />
                         {' '}Logout
                     </a>
@@ -48,7 +48,7 @@ class Navbar extends Component {
                     </Link>
                 </li>
                 </ul>
-                {isAuthenticated ? authLinks : guestLinks};
+                {isAuthenticated ? authLinks : guestLinks}
             </div>
             </div>
         </nav>

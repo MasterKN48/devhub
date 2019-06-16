@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import spinner from './spinner.gif';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
+import ProfileAction from './ProfileAction';
 import {getCurrentProfile} from '../../actions/profileAction';
 class Dashboard extends Component {
     
@@ -15,12 +16,16 @@ class Dashboard extends Component {
     const {profile,loading}=this.props.profile;
     let dashboard;
     if(profile === null || loading){
-      dashboard=<div><img src={spinner} style={{width:'200px',margin:'auto',display:'block'}}/></div>
+      dashboard=<div><img src={spinner} alt="spinner" style={{width:'200px',margin:'auto',display:'block'}}/></div>
     }
     else{
       // if login user have profile data
       if(Object.keys(profile).length >0){
-          dashboard=<h4>TODO: Display Profile</h4>
+          dashboard=(
+            <div>
+            <p className="lead text-muted">Welcome <Link to={`/profile/${profile.handle}`} >{user.name}</Link></p>
+            </div>
+          );
       }else{
         // USER is Logged in but no profile
         dashboard=(
