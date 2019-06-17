@@ -1,9 +1,11 @@
 import React, { Component } from "react"; 
 import {Link} from 'react-router-dom';
 import spinner from './spinner.gif';
-import {PropTypes} from 'prop-types';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ProfileAction from './ProfileAction';
+import Experience from './Experience';
+import Education from './Education';
 import {getCurrentProfile,deleteAccount} from '../../actions/profileAction';
 class Dashboard extends Component {
     
@@ -27,7 +29,8 @@ class Dashboard extends Component {
             <div>
             <p className="lead text-muted">Welcome <Link to={`/profile/${profile.handle}`} >{user.name}</Link></p>
               <ProfileAction />
-              {/*TODO: exp and edu */}
+              <Experience exp={profile.experience} />
+              <Education exp={profile.education} />
               <div style={{marginBottom:'60px'}}></div>
               <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">Delete Account</button>
             </div>
