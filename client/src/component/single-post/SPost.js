@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import Spinner from '../profiles/Spinner.gif';
 import PostItem from '../post/PostItem';
+import CommentForm from './CommentForm';
+import CommentFeed from './CommentFeed';
 import {getPost} from '../../actions/postAction';
 class SPost extends Component {
 componentDidMount(){
@@ -13,11 +15,13 @@ componentDidMount(){
     const {post,loading}=this.props.post;
     let postContent;
     if(post === null || loading || Object.keys(post).length ===0){
-      postContent= <img src={Spinner} alt="spin"/>
+      postContent= <img src={Spinner} style={{heigth:'100px',width:'100px'}} alt="spin"/>
     }else{
       postContent=(
         <div>
           <PostItem post={post} showActions={false}/>
+          <CommentForm postId={post._id} />
+          <CommentFeed postId={post._id} comments={post.comments}/>
         </div>
       )
     }
