@@ -1,9 +1,9 @@
 import React, { Component } from "react"; 
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import spinner from '../dashboard/spinner.gif';
+import Spinner from './Spinner.gif';
 import {getProfiles} from '../../actions/profileAction';
-
+import ProfileItems from './ProfileItems';
 class Profiles extends Component {
     componentDidMount(){
         this.props.getProfiles();
@@ -12,10 +12,12 @@ class Profiles extends Component {
       const {profiles,loading}=this.props.profile;
       let profileItems;
       if(profiles=== null || loading){
-          profileItems= <spinner />;
+          profileItems= <div className="container text-center"><img src={Spinner} alt="Loading.." style={{height:'10em',width:'10em'}}/></div>
       }else{
           if(profiles.length >0){
-              profileItems=<h1>PROFILES HERE</h1>
+              profileItems= profiles.map(profile => (
+                  <ProfileItems key={profile._id} profile={profile} />
+              ))
           } else{
             profileItems= <h4>No profiles found...</h4>
           }
