@@ -15,6 +15,8 @@ import { Provider } from "react-redux";
 import store from './store';
 import CreateProfile from './component/create-profile/CreateProfile';
 import Dashboard from './component/dashboard/Dashboard';
+import EditProfile from './component/dashboard/EditProfile';
+import AddExperience from './component/add-credentials/AddExperience';
 // check for token
 if(localStorage.jwtToken){
   // set auth token header auth
@@ -51,6 +53,12 @@ function App() {
           </Switch>
           <Switch>
             <PrivateRoute exact path="/create-profile" component={CreateProfile} />
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path="/edit-profile" component={EditProfile} />
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path="/add-experience" component={AddExperience} />
           </Switch>
         </div>
         <Footer />
