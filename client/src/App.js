@@ -22,6 +22,7 @@ import Profiles from './component/profiles/Profiles';
 import Profile from './component/profile/Profile';
 import NotFound from './component/not-found/NotFound';
 import Post from './component/post/Post';
+import SPost from './component/single-post/SPost';
 // check for token
 if(localStorage.jwtToken){
   // set auth token header auth
@@ -72,6 +73,9 @@ function App() {
           </Switch>
           <Switch>
             <PrivateRoute exact path="/post" component={Post} />
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path="/post/:id" component={SPost} />
           </Switch>
           <Route exact path="/not-found" component={NotFound} />
         </div>
