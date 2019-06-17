@@ -17,6 +17,7 @@ import CreateProfile from './component/create-profile/CreateProfile';
 import Dashboard from './component/dashboard/Dashboard';
 import EditProfile from './component/dashboard/EditProfile';
 import AddExperience from './component/add-credentials/AddExperience';
+import AddEducation from './component/add-credentials/AddEducation';
 // check for token
 if(localStorage.jwtToken){
   // set auth token header auth
@@ -59,6 +60,9 @@ function App() {
           </Switch>
           <Switch>
             <PrivateRoute exact path="/add-experience" component={AddExperience} />
+          </Switch>
+          <Switch>
+            <PrivateRoute exact path="/add-education" component={AddEducation} />
           </Switch>
         </div>
         <Footer />
