@@ -80,7 +80,7 @@ router.post('/login', (req, res) => {
                 const payload={id:user.id,name:user.name,avatar: user.avatar} ///payload jwt
                // Sign Token
 
-                jwt.sign(payload,key,{expiresIn: 3600},(err,token)=>{
+                jwt.sign(payload,key,{expiresIn: 18000},(err,token)=>{
                     res.json({
                         success:true,
                         token: 'Bearer '+token // Bearer is protocol

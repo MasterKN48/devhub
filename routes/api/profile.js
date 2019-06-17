@@ -123,7 +123,7 @@ router.delete('/experience/:exp_id',passport.authenticate('jwt',{session:false})
 // @desc    Delete experience from profile
 // @access  Private
 
-router.delete('/experience/:edu_id',passport.authenticate('jwt',{session:false}),(req,res)=>{
+router.delete('/education/:edu_id',passport.authenticate('jwt',{session:false}),(req,res)=>{
     Profile.findOne({user:req.user.id}).then(profile=>{
         // Get remove index
         const removeIndex=profile.education
@@ -205,7 +205,7 @@ router.post('/',passport.authenticate('jwt',{session:false}),(req,res)=>{
     if(req.body.location) profileFields.location= req.body.location;
     if(req.body.bio) profileFields.bio= req.body.bio;
     if(req.body.status) profileFields.status= req.body.status;
-    if(req.body.githubUserName) profileFields.githubUserName= req.body.githubUserName;
+    if(req.body.githubusername) profileFields.githubusername= req.body.githubusername;
     // skills
     if(typeof req.body.skills !== 'undefined'){
         profileFields.skills=req.body.skills.split(',');

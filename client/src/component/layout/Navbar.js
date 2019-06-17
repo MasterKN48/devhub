@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import {logoutUser} from '../../actions/authAction';
+import Dev from '../../img/Dev.png';
 import {clearCurrentProfile} from '../../actions/profileAction';
 class Navbar extends Component {
   onLogoutClick(e){
@@ -39,7 +40,7 @@ class Navbar extends Component {
     return (
         <nav className="navbar navbar-fixed navbar-expand-sm navbar-dark bg-dark mb-4">
             <div className="container">
-            <Link className="navbar-brand" to="/">DevHub</Link>
+            <Link className="navbar-brand" to="/"><img className=' brand-logo ' style={{heigth:'64px',width:'64px'}} src={Dev} alt="logo"/>Hub</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
                 <span className="navbar-toggler-icon"></span>
             </button>
