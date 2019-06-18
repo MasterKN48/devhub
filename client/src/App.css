@@ -17,7 +17,7 @@ img {
   position: relative;
   background: url('./img/back.svg');
   background-attachment: fixed;
-  background-position: center;
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
 }
