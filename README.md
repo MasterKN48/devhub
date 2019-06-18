@@ -1,4 +1,5 @@
-# DevHub
+# DevHub -- A Developer Connector Soical Media
+#### To Create, Share Profile, Create Post, ask questions ..etc
 
 ### This is a small soical media network site for developers
 ### where developers can ask questions how there profiles to each other 
