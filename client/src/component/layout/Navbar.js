@@ -24,7 +24,7 @@ class Navbar extends Component {
                 </li>
                 <li className="nav-item">
                     <a href="#home" className="nav-link" onClick={this.onLogoutClick.bind(this)}>
-                        <img className="rounded-circle" src={user.avatar} alt={user.name} style={{width:'25px',marginRight:'5px'}} title="You must have gavatar to show user image" />
+                        <img className="rounded hoverable" src={user.avatar} alt={user.name} style={{width:'35px',marginRight:'5px'}} title="You must have gavatar to show user image" />
                         {' '}Logout
                     </a>
                 </li>
@@ -41,9 +41,9 @@ class Navbar extends Component {
           </ul>
     );
     return (
-        <nav className="navbar navbar-fixed navbar-expand-sm navbar-dark bg-dark mb-4">
+        <nav className="navbar navbar-expand-sm navbar-dark navb mb-4">
             <div className="container">
-            <Link className="navbar-brand" to="/"><img className=' brand-logo ' style={{heigth:'64px',width:'64px'}} src={Dev} alt="logo"/>Hub</Link>
+            <Link className="navbar-brand" to="/"><img className=' brand-logo ' style={{heigth:'64px',width:'64px'}} src={Dev} alt="logo"/><span className='text-warning'>Hub</span></Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
                 <span className="navbar-toggler-icon"></span>
             </button>

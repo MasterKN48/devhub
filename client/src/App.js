@@ -51,7 +51,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Route exact path="/" component={Landing} />
-        <div className="container">
+        <div className="container cloudy-knoxville-gradient">
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/profiles" component={Profiles} />
