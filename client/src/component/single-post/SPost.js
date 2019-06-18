@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import Spinner from '../profiles/Spinner.gif';
+import Spinner from '../profiles/Spinner.svg';
 import PostItem from '../post/PostItem';
 import CommentForm from './CommentForm';
 import CommentFeed from './CommentFeed';

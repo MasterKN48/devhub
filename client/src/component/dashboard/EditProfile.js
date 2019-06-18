@@ -25,7 +25,6 @@ class CreateProfile extends Component {
         facebook: '',
         linkedin: '',
         youtube: '',
-        instagram: '',
         errors: {}
       };
   
@@ -69,9 +68,6 @@ class CreateProfile extends Component {
         profile.youtube = !isEmpty(profile.social.youtube)
           ? profile.social.youtube
           : '';
-        profile.instagram = !isEmpty(profile.social.instagram)
-          ? profile.social.instagram
-          : '';
   
         // Set component fields state
         this.setState({
@@ -107,7 +103,6 @@ class CreateProfile extends Component {
         facebook: this.state.facebook,
         linkedin: this.state.linkedin,
         youtube: this.state.youtube,
-        instagram: this.state.instagram
       };
   
       this.props.createProfile(profileData, this.props.history);
@@ -128,7 +123,7 @@ class CreateProfile extends Component {
             <InputGroup
               placeholder="Twitter Profile URL"
               name="twitter"
-              icon="fab fa-twitter"
+              icon="fa fa-twitter"
               value={this.state.twitter}
               onChange={this.onChange}
               error={errors.twitter}
@@ -137,7 +132,7 @@ class CreateProfile extends Component {
             <InputGroup
               placeholder="Facebook Page URL"
               name="facebook"
-              icon="fab fa-facebook"
+              icon="fa fa-facebook"
               value={this.state.facebook}
               onChange={this.onChange}
               error={errors.facebook}
@@ -146,7 +141,7 @@ class CreateProfile extends Component {
             <InputGroup
               placeholder="Linkedin Profile URL"
               name="linkedin"
-              icon="fab fa-linkedin"
+              icon="fa fa-linkedin"
               value={this.state.linkedin}
               onChange={this.onChange}
               error={errors.linkedin}
@@ -155,19 +150,10 @@ class CreateProfile extends Component {
             <InputGroup
               placeholder="YouTube Channel URL"
               name="youtube"
-              icon="fab fa-youtube"
+              icon="fa fa-youtube"
               value={this.state.youtube}
               onChange={this.onChange}
               error={errors.youtube}
-            />
-  
-            <InputGroup
-              placeholder="Instagram Page URL"
-              name="instagram"
-              icon="fab fa-instagram"
-              value={this.state.instagram}
-              onChange={this.onChange}
-              error={errors.instagram}
             />
           </div>
         );
@@ -282,7 +268,7 @@ class CreateProfile extends Component {
                   <input
                     type="submit"
                     value="Submit"
-                    className="btn btn-info btn-block mt-4"
+                    className="btn peach-gradient btn-block mt-4"
                   />
                 </form>
               </div>

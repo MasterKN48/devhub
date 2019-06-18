@@ -1,7 +1,7 @@
 import React, { Component } from "react"; 
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import Spinner from './Spinner.gif';
+import Spinner from './Spinner.svg';
 import {getProfiles} from '../../actions/profileAction';
 import ProfileItems from './ProfileItems';
 class Profiles extends Component {

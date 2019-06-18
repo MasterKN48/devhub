@@ -17,14 +17,14 @@ class Education extends Component {
                     <Moment format='YYYY/MM/DD'>{exp.from}</Moment>
                     - {exp.to ? (<Moment format='YYYY/MM/DD'>{exp.to}</Moment>): 'Now'}
                 </td>
-                <td> <button onClick={this.onDeleteClick.bind(this,exp._id)} className='btn btn-danger'> Delete</button> </td>
+                <td> <button onClick={this.onDeleteClick.bind(this,exp._id)} className='btn del waves-effect'> Delete</button> </td>
             </tr>
       ))
     return (
      <div>
        <h4 className="mb-4">Education Credentials</h4>
        <table className="table table-hover ">
-        <thead style={{fontSize:'15px'}}>
+        <thead className='navb white-text' style={{fontSize:'15px'}}>
             <tr>
             <th>School/Institute</th>
             <th>Degree</th>

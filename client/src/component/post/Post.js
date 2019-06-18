@@ -1,7 +1,7 @@
 import React, { Component } from "react"; 
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import Spinner from '../profiles/Spinner.gif';
+import Spinner from '../profiles/Spinner.svg';
 import PostForm from './PostForm';
 import PostFeed from './PostFeed';
 import {getPosts} from '../../actions/postAction';

@@ -97,7 +97,7 @@ class AddExperience extends Component {
                   onChange={this.onChange}
                   errors={errors.location}
                 />
-                <h6>From Date</h6>
+                
                 <TextFieldGroup
                   name="from"
                   type="date"
@@ -105,7 +105,7 @@ class AddExperience extends Component {
                   onChange={this.onChange}
                   errors={errors.from}
                 />
-                <h6>To Date</h6>
+               
                 <TextFieldGroup
                   name="to"
                   type="date"
@@ -139,7 +139,7 @@ class AddExperience extends Component {
                 <input
                   type="submit"
                   value="Submit"
-                  className="btn btn-info btn-block mt-4"
+                  className="btn peach-gradient btn-block mt-4"
                 />
               </form>
             </div>

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function TextFieldGroup({name,placeholder,value,label,errors,info,type,onChange,disabled}) {
     return (
         <div className="form-group">
-            <label htmlFor={placeholder} className="bmd-label-floating">{name=== 'password2' ? 'Confirm Password' : capitalizeFirstLetter(name)}</label>
+            <label htmlFor={placeholder} className="bmd-label-floating">{name=== 'password2' ? 'Confirm Password' : name==='githubusername' ? 'Github User Name':capitalizeFirstLetter(name)}</label>
             <input 
                 id={placeholder}
                 type={type}

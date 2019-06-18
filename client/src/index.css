@@ -14,3 +14,7 @@ code {
 .navb{
   background-image: linear-gradient(to right,#212121,#1C2331);
 }
+.del{
+  background-color: #CC0000;
+  color: white;
+}

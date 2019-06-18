@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import Spinner from '../profiles/Spinner.gif';
+import Spinner from '../profiles/Spinner.svg';
 import ProfileHeader from './ProfileHeader';
 import ProfileCreds from './ProfileCreds';
 import ProfileGithub from './ProfileGithub';
