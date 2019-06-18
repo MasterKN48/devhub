@@ -14,14 +14,12 @@ class CommentItem extends Component {
     return (
       <div className="card card-body mb-3">
         <div className="row">
-          <div className="col-md-2">
-            <a href="profile.html">
+          <div className="col-md-2 zoom">
               <img
                 className="rounded-circle d-none d-md-block"
                 src={comment.avatar}
                 alt=""
               />
-            </a>
             <br />
             <p className="text-center">{comment.name}</p>
           </div>
@@ -31,7 +29,8 @@ class CommentItem extends Component {
               <button
                 onClick={this.onDeleteClick.bind(this, postId, comment._id)}
                 type="button"
-                className="btn btn-danger mr-1"
+                title='Delete Comment'
+                className="btn del btn-sm mr-1"
               >
                 <i className="fa fa-times" />
               </button>

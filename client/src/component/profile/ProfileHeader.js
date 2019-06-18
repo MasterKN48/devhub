@@ -8,11 +8,11 @@ class ProfileHeader extends Component {
     return (
       <div className="row">
         <div className="col-md-12">
-          <div className="card card-body bg-info text-white mb-3">
+          <div className="card card-body bt mask rgba-gradient text-white mb-3">
             <div className="row">
-              <div className="col-4 col-md-3 m-auto">
+              <div className="col-4 col-md-3 m-auto zoom">
                 <img
-                  className="rounded-circle"
+                  className="img-fluid z-depth-1 rounded-circle"
                   src={profile.user.avatar}
                   alt="avatar"
                 />

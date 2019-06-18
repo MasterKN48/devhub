@@ -13,8 +13,8 @@ class Post extends Component {
   render() {
       const {posts,loading}=this.props.post;
       let postContent;
-      if(posts ===null || loading){
-          postContent=<img src={Spinner} alt='sd' />
+      if(posts === null || loading){
+          postContent=<img src={Spinner} alt="spinner" style={{width:'100px',margin:'auto',display:'block'}} />
       }else{
           postContent=<PostFeed posts={posts} />;
       }

@@ -33,10 +33,10 @@ class PostItem extends Component {
     return (
       <div className="card card-body mb-3">
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-md-2 zoom">
             <Link to={`/profile/user/${post.user}`}>
               <img
-                className="rounded-circle d-none d-md-block"
+                className="img-fluid z-depth-1 rounded-circle"
                 src={post.avatar}
                 alt=""
               />
@@ -45,13 +45,13 @@ class PostItem extends Component {
             <p className="text-center">{post.name}</p>
           </div>
           <div className="col-md-10">
-            <p className="lead">{post.text}</p>
+            <p className="lead" style={{fontSize:'18px'}}>{post.text}</p>
             {showActions ? (
               <span>
                 <button
                   onClick={this.onLikeClick.bind(this, post._id)}
                   type="button"
-                  className="btn btn-light mr-1"
+                  className="btn btn-floating btn-light btn-sm mr-1"
                 >
                   <i
                     className={classnames('fa fa-thumbs-up', {
@@ -63,18 +63,19 @@ class PostItem extends Component {
                 <button
                   onClick={this.onUnlikeClick.bind(this, post._id)}
                   type="button"
-                  className="btn btn-light mr-1"
+                  className="btn btn-floating btn-light btn-sm mr-1"
                 >
                   <i className="text-secondary fa fa-thumbs-down" />
                 </button>
-                <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
-                  Comments
+                <Link to={`/post/${post._id}`} className="btn btn-sm btn-floating btn-dark mr-1">
+                  Comments&nbsp;&nbsp;<span className="counter counter-lg">{post.comments.length ? post.comments.length :''}</span>
                 </Link>
                 {post.user === auth.user.id ? (
                   <button
                     onClick={this.onDeleteClick.bind(this, post._id)}
                     type="button"
-                    className="btn btn-danger mr-1"
+                    title='Delete Post'
+                    className="btn btn-floating btn-sm del mr-1"
                   >
                     <i className="fa fa-times" />
                   </button>

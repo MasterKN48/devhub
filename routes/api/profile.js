@@ -173,7 +173,7 @@ router.get('/handle/:handle',(req,res)=>{
 
 router.get('/user/:user_id',(req,res)=>{
     const errors={};
-    Profile.findOne({handle:req.params.user_id})
+    Profile.findOne({user:req.params.user_id})
     .populate('user',['avatar','name'])
     .then(profile=>{
         if(!profile){

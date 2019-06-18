@@ -48,7 +48,7 @@ function App() {
   return (
     <Provider store={store}>
     <BrowserRouter>
-      <div className="App">
+      <div className="main-container">
         <Navbar />
         <Route exact path="/" component={Landing} />
         <div className="container cloudy-knoxville-gradient">
@@ -56,6 +56,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/profiles" component={Profiles} />
           <Route exact path="/profile/:handle" component={Profile} />
+          <Route exact path="/profile/user/:id" component={Profile} />
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
           </Switch>

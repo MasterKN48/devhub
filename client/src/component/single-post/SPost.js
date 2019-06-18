@@ -15,7 +15,7 @@ componentDidMount(){
     const {post,loading}=this.props.post;
     let postContent;
     if(post === null || loading || Object.keys(post).length ===0){
-      postContent= <img src={Spinner} style={{heigth:'100px',width:'100px'}} alt="spin"/>
+      postContent= <img src={Spinner} style={{width:'100px',margin:'auto',display:'block'}} alt="spin"/>
     }else{
       postContent=(
         <div>

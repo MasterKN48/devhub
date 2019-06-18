@@ -7,11 +7,14 @@ import ProfileHeader from './ProfileHeader';
 import ProfileCreds from './ProfileCreds';
 import ProfileGithub from './ProfileGithub';
 import ProfileAbout from './ProfileAbout';
-import {getProfileByHandle} from '../../actions/profileAction.js';
+import {getProfileByHandle,getProfileById} from '../../actions/profileAction.js';
 class Profile extends Component {
     componentDidMount(){
         if(this.props.match.params.handle){
             this.props.getProfileByHandle(this.props.match.params.handle);
+        }
+        if(this.props.match.params.id){
+            this.props.getProfileById(this.props.match.params.id);
         }
     }
     
@@ -57,9 +60,10 @@ class Profile extends Component {
 }
 Profile.propTypes={
     profile:PropTypes.object.isRequired,
-    getProfileByHandle:PropTypes.func.isRequired
+    getProfileByHandle:PropTypes.func.isRequired,
+    getProfileById:PropTypes.func.isRequired
 }
 const mapStateToProps=state=>({
     profile:state.profile
 });
-export default connect(mapStateToProps,{getProfileByHandle})(Profile);
+export default connect(mapStateToProps,{getProfileByHandle,getProfileById})(Profile);

@@ -22,7 +22,7 @@ class Navbar extends Component {
                 <li className="nav-item">
                     <Link className="nav-link" to="/post">Post</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item zoom">
                     <a href="#home" className="nav-link" onClick={this.onLogoutClick.bind(this)}>
                         <img className="rounded hoverable" src={user.avatar} alt={user.name} style={{width:'35px',marginRight:'5px'}} title="You must have gavatar to show user image" />
                         {' '}Logout
