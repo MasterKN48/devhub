@@ -23,6 +23,7 @@ import Profile from './component/profile/Profile';
 import NotFound from './component/not-found/NotFound';
 import Post from './component/post/Post';
 import SPost from './component/single-post/SPost';
+import StarfieldAnimation from 'react-starfield-animation';
 // check for token
 if(localStorage.jwtToken){
   // set auth token header auth
@@ -48,8 +49,15 @@ function App() {
   return (
     <Provider store={store}>
     <BrowserRouter>
-      <div className="main-container">
+      <div className="main-container bb">
         <Navbar />
+        <StarfieldAnimation
+            style={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%'
+            }}
+          />
         <Route exact path="/" component={Landing} />
         <div className="container cloudy-knoxville-gradient">
           <Route exact path="/register" component={Register} />

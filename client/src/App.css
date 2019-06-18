@@ -4,14 +4,23 @@ img {
 
 .landing {
   position: relative;
-  background: url('./img/showcase.jpg') no-repeat;
-  background-size: cover;
+  background: url('./img/showcase.jpg');
+  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 77vh;
   margin-top: -24px;
   margin-bottom: -50px;
 }
-
+.bb{
+  position: relative;
+  background: url('./img/back.svg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .landing-inner {
   padding-top: 80px;
 }
