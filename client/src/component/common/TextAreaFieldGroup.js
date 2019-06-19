@@ -7,6 +7,7 @@ let modules = {
   toolbar: [
     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
     ['blockquote', 'code-block'],
+    [{ 'size': [] }],
     [{ 'list': 'ordered'}, { 'list': 'bullet' }],
     [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
     [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
@@ -27,6 +28,7 @@ let formats = [
   'header', 'font', 'size',
   'bold', 'italic', 'underline', 'strike', 'blockquote',
   'list', 'bullet', 'indent',
+  'color', 'background',
   'link', 'image', 'video','color'
 ]
 const TextAreaFieldGroup = ({
