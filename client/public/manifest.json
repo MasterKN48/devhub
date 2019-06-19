@@ -1,16 +1,16 @@
 {
   "short_name": "DevHub",
-  "name": "DeveloperHub",
+  "name": "DevHub",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
       "src": "dev.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192 64x64"
     },
     {
       "src": "dev.png",

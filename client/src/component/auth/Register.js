@@ -4,6 +4,7 @@ import {withRouter} from 'react-router-dom'; // use to pass router history to au
 import {connect} from 'react-redux';
 import {registerUser} from '../../actions/authAction';
 import TextFieldGroup from '../common/TextFieldGroup.js';
+import Dev from '../../img/Dev.png';
 class Register extends Component {
     constructor(){
         super();
@@ -52,10 +53,10 @@ class Register extends Component {
         <div className="register">
             <div className="container">
             <div className="row">
-                <div className="col-md-8 m-auto">
-                <h1 className="display-4 text-center">Sign Up</h1>
+                <div className="col-md-8 m-auto text-center">
+                <span className="display-4 peach-gradient" style={{color:'#1c2331'}}><img style={{height:'120px',width:'120px'}} alt="DevHub_logo" src={Dev} />Hub</span>
                 <p className="lead text-center">Create your DevHub account</p>
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmit} className="text-left">
                     <TextFieldGroup
                     placeholder="Name"
                     name="name"
@@ -88,7 +89,7 @@ class Register extends Component {
                     onChange={this.onChange}
                     errors={errors.password2}
                     />
-                    <input type="submit" className="btn peach-gradient btn-rounded btn-block mt-4" />
+                    <input type="submit" value="SignUp" className="btn peach-gradient btn-rounded btn-block mt-4" />
                 </form>
                 </div>
             </div>

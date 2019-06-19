@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import TextFieldGroup from '../common/TextFieldGroup.js';
 import {loginUser} from '../../actions/authAction';
+import Dev from '../../img/Dev.png';
 class Login extends Component {
     constructor(){
         super();
@@ -49,10 +50,10 @@ class Login extends Component {
        <div className="login">
         <div className="container" style={{paddingBottom:'20vh',paddingTop:'5vh'}}>
         <div className="row">
-            <div className="col-md-8 m-auto">
-            <h1 className="display-4 text-center">Log In</h1>
+            <div className="col-md-8 m-auto text-center">
+            <span className="display-4 peach-gradient" style={{color:'#1c2331'}}><img style={{height:'120px',width:'120px'}} alt="DevHub_logo" src={Dev} />Hub</span>
             <p className="lead text-center">Sign in to your DevHub account</p>
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit} className="text-left" >
                 <TextFieldGroup
                  placeholder="Email Address"
                  name="email"
@@ -70,7 +71,7 @@ class Login extends Component {
                  onChange={this.onChange}
                  errors={errors.password}
                  />
-                <input type="submit" className="btn peach-gradient btn-rounded btn-block mt-4" />
+                <input type="submit" value='Login' className="btn peach-gradient btn-rounded btn-block mt-4" />
             </form>
             </div>
         </div>
