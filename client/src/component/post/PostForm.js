@@ -10,17 +10,18 @@ class PostForm extends Component {
             text:'',
             errors: {}
         }
-  
-        this.onChange = this.onChange.bind(this);
+        this.handleChange = this.handleChange.bind(this)
+        //this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
       }
-    
       componentWillReceiveProps(newProps) {
         if (newProps.errors) {
           this.setState({ errors: newProps.errors });
         }
       }
-    
+      handleChange(value) {
+        this.setState({ text: value })
+      }
       onSubmit(e) {
         e.preventDefault();
     
@@ -53,10 +54,11 @@ class PostForm extends Component {
                       placeholder="Create a post"
                       name="text"
                       value={this.state.text}
-                      onChange={this.onChange}
+                      onChange={this.handleChange}
                       error={errors.text}
                     />
                   </div>
+                  
                   <button type="submit" className="btn btn-dark waves-effect waves-light">
                     Submit
                   </button>
