@@ -54,7 +54,7 @@ class PostForm extends Component {
                     />
                   </div>
                   
-                  <button type="submit" className="btn bt btn-md waves-effect waves-light">
+                  <button type="submit" className="btn btn-dark btn-md waves-effect waves-light">
                     Submit
                   </button>
                 </form>
