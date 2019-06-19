@@ -36,9 +36,10 @@ class PostItem extends Component {
           <div className="col-md-2 zoom">
             <Link to={`/profile/user/${post.user}`}>
               <img
-                className="img-fluid z-depth-1 rounded-circle"
+                className="rounded mx-auto d-block z-depth-1 img-thumbnail"
                 src={post.avatar}
-                alt=""
+                style={{height:'84px',width:'84px'}}
+                alt="profile"
               />
             </Link>
             <br />

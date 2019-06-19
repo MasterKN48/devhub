@@ -16,9 +16,10 @@ class CommentItem extends Component {
         <div className="row">
           <div className="col-md-2 zoom">
               <img
-                className="rounded-circle d-none d-md-block"
+                className="rounded-circle mx-auto d-block z-depth-1 img-thumbnail"
+                style={{height:'84px',width:'84px'}}
+                alt="profile"
                 src={comment.avatar}
-                alt=""
               />
             <br />
             <p className="text-center">{comment.name}</p>

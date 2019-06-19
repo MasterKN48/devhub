@@ -8,12 +8,12 @@ class ProfileItems extends Component {
     return (
      <div className="card card-body cloudy-knoxville-gradient mb-3">
        <div className="row">
-           <div className="col-2 zoom">
+           <div className="col-4 col-lg-2 col-xs-4 zoom">
                <img src={profile.user.avatar} alt="avatar" className="img-fluid z-depth-1 img-thumbnail rounded-circle"/>
            </div>
-           <div className="col-lg-6 md-4 col-8">
-                <h3>{profile.user.name}</h3>
-                <p>
+           <div className="col-lg-4 col-md-4 col-8">
+                <h4>{profile.user.name}</h4>
+                <p style={{fontSize:'14px'}}>
                      {profile.status} {isEmpty(profile.company) ? null : (<span>at {profile.company}</span>)}
                 </p>
                 <p>
@@ -24,8 +24,8 @@ class ProfileItems extends Component {
                 </Link>
            </div>
            <div className="col-md-4 d-none d-md-block">
-               <h4>Skill Set</h4>
-               <ul className="list-group">
+               <h5>Skill Set</h5>
+               <ul className="list-group" style={{fontSize:'14px'}}>
                    {profile.skills.slice(0,4).map((skill,index)=>(
                        <li key={index} className="list-group-item">
                            <i className="fa fa-check pr-1" />
