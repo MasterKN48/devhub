@@ -28,11 +28,11 @@ class Dashboard extends Component {
           dashboard=(
             <div>
             <p className="lead text-muted">Welcome <Link to={`/profile/${profile.handle}`} >{user.name}</Link></p>
-              <ProfileAction />
+              <ProfileAction /><br/>
               <Experience exp={profile.experience} />
               <Education exp={profile.education} />
               <div style={{marginBottom:'60px'}}></div>
-              <button onClick={this.onDeleteClick.bind(this)} className="btn del waves-effect">Delete Account</button>
+              <button onClick={this.onDeleteClick.bind(this)} className="btn btn-md del waves-effect">Delete Account</button>
             </div>
           );
       }else{
@@ -51,7 +51,8 @@ class Dashboard extends Component {
        <div className="container mask waves-effect waves-light rgba-white-slight">
          <div className="row">
            <div className="col-md-12">
-             <h1>Dashboard{dashboard}</h1>
+             <h3>Dashboard</h3>
+             {dashboard}
            </div>
          </div>
        </div>

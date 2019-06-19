@@ -9,7 +9,7 @@ class ProfileItems extends Component {
      <div className="card card-body cloudy-knoxville-gradient mb-3">
        <div className="row">
            <div className="col-2 zoom">
-               <img src={profile.user.avatar} alt="avatar" className="img-fluid z-depth-1 rounded-circle" style={{border:'8px solid white',backgroundColor:'white'}}/>
+               <img src={profile.user.avatar} alt="avatar" className="img-fluid z-depth-1 img-thumbnail rounded-circle"/>
            </div>
            <div className="col-lg-6 md-4 col-8">
                 <h3>{profile.user.name}</h3>
@@ -19,7 +19,7 @@ class ProfileItems extends Component {
                 <p>
                     {isEmpty(profile.location) ? null : (<span>{profile.location}</span>)}
                 </p>
-                <Link to={ `/profile/${profile.handle}`} className='btn bt'>
+                <Link to={ `/profile/${profile.handle}`} className='btn btn-md waves-effect waves-light bt'>
                     View Profile
                 </Link>
            </div>

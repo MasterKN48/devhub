@@ -16,25 +16,27 @@ class Experience extends Component {
                     <Moment format='YYYY/MM/DD'>{exp.from}</Moment>
                     - {exp.to ? (<Moment format='YYYY/MM/DD'>{exp.to}</Moment>): 'Now'}
                 </td>
-                <td> <button onClick={this.onDeleteClick.bind(this,exp._id)} className='btn del waves-effect'> Delete</button> </td>
+                <td> <button onClick={this.onDeleteClick.bind(this,exp._id)} className='btn del btn-sm waves-effect'> Delete</button> </td>
             </tr>
       ))
-    return (
+    return ( 
      <div>
        <h4 className="mb-4">Experience Credentials</h4>
-       <table className="table table-hover ">
-        <thead className='navb white-text' style={{fontSize:'15px'}}>
-            <tr>
-            <th>Company</th>
-            <th>Title</th>
-            <th>Years</th>
-            <th>Action</th>
-            </tr>
-        </thead>
-        <tbody style={{fontSize:'15px'}}>
-                {expc}
-        </tbody>
-       </table>
+       <div className="table-responsive cloudy-knoxville-gradient">
+          <table className="table table-hover">
+            <thead className='navb white-text' style={{fontSize:'15px'}}>
+                <tr>
+                <th>Company</th>
+                <th>Title</th>
+                <th>Years</th>
+                <th>Action</th>
+                </tr>
+            </thead>
+            <tbody style={{fontSize:'15px'}}>
+                    {expc}
+            </tbody>
+          </table>
+       </div>
      </div>
     );
   }
