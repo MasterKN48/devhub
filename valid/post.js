@@ -5,8 +5,8 @@ module.exports=function validatePostInput(data){
     let errors={}
     data.text=!isEmpty(data.text) ? data.text : '';
     
-    if(!validator.isLength(data.text,{min:10,max:500})){
-        errors.text="Post must be atleast 10 chars to 500 chars";
+    if(!validator.isLength(data.text,{min:10,max:5000})){
+        errors.text="Post must be atleast 10 chars to 5000 chars";
     }
     if(validator.isEmpty(data.text)){
         errors.text="Text field is required";

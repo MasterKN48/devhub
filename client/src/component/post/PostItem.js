@@ -46,7 +46,7 @@ class PostItem extends Component {
             <p className="text-center">{post.name}</p>
           </div>
           <div className="col-md-10">
-            <p className="lead" style={{fontSize:'18px'}}>{post.text}</p>
+            <div className="lead" style={{fontSize:'18px'}} dangerouslySetInnerHTML={{ __html: post.text}}></div>
             {showActions ? (
               <span>
                 <button
