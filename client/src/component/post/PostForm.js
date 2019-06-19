@@ -10,8 +10,7 @@ class PostForm extends Component {
             text:'',
             errors: {}
         }
-        this.handleChange = this.handleChange.bind(this)
-        //this.onChange = this.onChange.bind(this);
+        this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
       }
       componentWillReceiveProps(newProps) {
@@ -19,7 +18,7 @@ class PostForm extends Component {
           this.setState({ errors: newProps.errors });
         }
       }
-      handleChange(value) {
+      onChange(value) {
         this.setState({ text: value })
       }
       onSubmit(e) {
@@ -36,10 +35,6 @@ class PostForm extends Component {
         this.props.addPost(newPost);
         this.setState({ text: '' });
       }
-    
-      onChange(e) {
-        this.setState({ [e.target.name]: e.target.value });
-      }
     render() {
         const { errors } = this.state;
     
@@ -54,12 +49,12 @@ class PostForm extends Component {
                       placeholder="Create a post"
                       name="text"
                       value={this.state.text}
-                      onChange={this.handleChange}
+                      onChange={this.onChange}
                       error={errors.text}
                     />
                   </div>
                   
-                  <button type="submit" className="btn btn-dark waves-effect waves-light">
+                  <button type="submit" className="btn bt btn-md waves-effect waves-light">
                     Submit
                   </button>
                 </form>

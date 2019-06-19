@@ -30,8 +30,8 @@ componentDidMount(){
        <div className="container">
          <div className="row">
            <div className="col-md-12">
-             <Link to='/post' className='btn btn-light mb-3' >
-                Back to posts
+             <Link to='/post' className='btn btn-light btn-md mb-3' >
+                Back to Posts
              </Link>
              {postContent}
            </div>

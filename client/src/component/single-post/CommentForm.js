@@ -38,8 +38,8 @@ class CommentForm extends Component {
     this.setState({ text: '' });
   }
 
-  onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+  onChange(value) {
+    this.setState({ text: value })
   }
 
   render() {

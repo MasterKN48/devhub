@@ -27,7 +27,7 @@ let formats = [
   'header', 'font', 'size',
   'bold', 'italic', 'underline', 'strike', 'blockquote',
   'list', 'bullet', 'indent',
-  'link', 'image', 'video'
+  'link', 'image', 'video','color'
 ]
 const TextAreaFieldGroup = ({
   name,
@@ -47,6 +47,7 @@ const TextAreaFieldGroup = ({
         theme="bubble"
         modules={modules}
         formats={formats}
+        name={name}
         placeholder={placeholder}
         value={value}
         bounds={'.app'}
