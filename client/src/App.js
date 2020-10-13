@@ -1,7 +1,6 @@
 import React from 'react';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import Navbar from './component/layout/Navbar';
-import './App.css';
 import PrivateRoute from './component/common/PrivateRoute';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './util/setAuthToken';
@@ -18,11 +17,14 @@ import Dashboard from './component/dashboard/Dashboard';
 import EditProfile from './component/dashboard/EditProfile';
 import AddExperience from './component/add-credentials/AddExperience';
 import AddEducation from './component/add-credentials/AddEducation';
-import Profiles from './component/profiles/Profiles';
 import Profile from './component/profile/Profile';
-import NotFound from './component/not-found/NotFound';
+import Profiles from './component/profiles/Profiles';
+
 import Post from './component/post/Post';
 import SPost from './component/single-post/SPost';
+import NotFound from './component/not-found/NotFound';
+import './App.css';
+
 // check for token
 if(localStorage.jwtToken){
   // set auth token header auth
